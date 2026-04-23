@@ -1,0 +1,6 @@
+.DS_Store
+actas/
+gitignore/
+docs/
+CLAUDE_CODE_DEPLOY.md
+*.pdf
