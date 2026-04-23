@@ -900,47 +900,69 @@
 
       <!-- Visual izquierda -->
       <div style="position:relative;">
+        <!-- Fondo decorativo -->
         <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(61,189,173,0.08),rgba(0,114,153,0.05));border-radius:24px;transform:rotate(-2deg);"></div>
-        <div style="position:relative;background:var(--white);border-radius:20px;border:1px solid rgba(9,70,77,0.08);padding:2.5rem;box-shadow:0 20px 60px rgba(9,70,77,0.08);">
-          <!-- Avatar LR -->
-          <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:2rem;">
-            <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--p2),var(--p1));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 8px 24px rgba(61,189,173,0.3);">
-              <span style="font-family:'Josefin Sans',sans-serif;font-size:1.6rem;font-weight:700;color:white;letter-spacing:-0.02em;">LR</span>
+
+        <!-- Galería de fotos -->
+        <div style="position:relative;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:auto auto;gap:10px;margin-bottom:16px;border-radius:20px;overflow:hidden;">
+          <div style="grid-row:1/3;aspect-ratio:3/4;background:linear-gradient(135deg,var(--p2),var(--p1));overflow:hidden;">
+            <img src="/media/leslie1.jpg" alt="Leslie Robles Terrazas" style="width:100%;height:100%;object-fit:cover;object-position:top;" onerror="this.style.display='none'">
+          </div>
+          <div style="aspect-ratio:1/1;background:linear-gradient(135deg,var(--s1),var(--p2));overflow:hidden;">
+            <img src="/media/leslie2.jpg" alt="Leslie Robles Terrazas" style="width:100%;height:100%;object-fit:cover;object-position:top;" onerror="this.style.display='none'">
+          </div>
+          <div style="aspect-ratio:1/1;background:linear-gradient(135deg,var(--base),var(--p1));overflow:hidden;">
+            <img src="/media/leslie3.jpg" alt="Leslie Robles Terrazas" style="width:100%;height:100%;object-fit:cover;object-position:top;" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <!-- Card credenciales -->
+        <div style="position:relative;background:var(--white);border-radius:20px;border:1px solid rgba(9,70,77,0.08);padding:2rem;box-shadow:0 20px 60px rgba(9,70,77,0.08);">
+          <!-- Nombre -->
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:1.25rem;border-bottom:1px solid rgba(9,70,77,0.07);">
+            <div style="width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--p2),var(--p1));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 14px rgba(61,189,173,0.3);">
+              <span style="font-family:'Josefin Sans',sans-serif;font-size:1rem;font-weight:700;color:white;">LR</span>
             </div>
             <div>
-              <div style="font-family:'Josefin Sans',sans-serif;font-size:1.15rem;font-weight:700;color:var(--base);">Leslie Robles</div>
-              <div style="font-size:13px;color:var(--p2);font-weight:500;margin-top:2px;">CEO &amp; Fundadora · Agreed</div>
-              <div style="font-size:12px;color:var(--muted);margin-top:2px;">Abogada Corporativa</div>
+              <div style="font-family:'Josefin Sans',sans-serif;font-size:1.05rem;font-weight:700;color:var(--base);">Leslie Robles Terrazas</div>
+              <div style="font-size:12px;color:var(--p2);font-weight:500;margin-top:2px;">CEO &amp; Fundadora · Agreed</div>
             </div>
           </div>
           <!-- Credenciales -->
-          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:1.75rem;">
-            <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 14px;background:var(--light);border-radius:10px;">
-              <span style="font-size:15px;margin-top:1px;">🎓</span>
+          <div style="display:flex;flex-direction:column;gap:9px;margin-bottom:1.5rem;">
+            <div style="display:flex;align-items:flex-start;gap:10px;padding:9px 13px;background:var(--light);border-radius:10px;">
+              <span style="font-size:14px;margin-top:1px;">🎓</span>
               <div>
-                <div style="font-size:13px;font-weight:500;color:var(--base);">Maestría en Administración de Empresas</div>
-                <div style="font-size:12px;color:var(--muted);">Universidad Anáhuac</div>
+                <div style="font-size:13px;font-weight:500;color:var(--base);">Maestría en Dirección de Empresas</div>
+                <div style="font-size:12px;color:var(--muted);">Universidad Anáhuac México Norte</div>
               </div>
             </div>
-            <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 14px;background:var(--light);border-radius:10px;">
-              <span style="font-size:15px;margin-top:1px;">⚖️</span>
+            <div style="display:flex;align-items:flex-start;gap:10px;padding:9px 13px;background:var(--light);border-radius:10px;">
+              <span style="font-size:14px;margin-top:1px;">⚖️</span>
               <div>
                 <div style="font-size:13px;font-weight:500;color:var(--base);">Licenciatura en Derecho</div>
-                <div style="font-size:12px;color:var(--muted);">ITESM Chihuahua</div>
+                <div style="font-size:12px;color:var(--muted);">Tec de Monterrey</div>
               </div>
             </div>
-            <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 14px;background:var(--light);border-radius:10px;">
-              <span style="font-size:15px;margin-top:1px;">🏭</span>
+            <div style="display:flex;align-items:flex-start;gap:10px;padding:9px 13px;background:var(--light);border-radius:10px;">
+              <span style="font-size:14px;margin-top:1px;">🏭</span>
               <div>
-                <div style="font-size:13px;font-weight:500;color:var(--base);">+15 años en derecho corporativo</div>
-                <div style="font-size:12px;color:var(--muted);">Industria automotriz · Cuauhtémoc, Chih.</div>
+                <div style="font-size:13px;font-weight:500;color:var(--base);">Directora Jurídica · Grupo empresarial</div>
+                <div style="font-size:12px;color:var(--muted);">Automotriz · Trailers · Proyectos agrícolas</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px;padding:9px 13px;background:var(--light);border-radius:10px;">
+              <span style="font-size:14px;margin-top:1px;">🎵</span>
+              <div>
+                <div style="font-size:13px;font-weight:500;color:var(--base);">Cofundadora · Mangos Music Foundation A.C.</div>
+                <div style="font-size:12px;color:var(--muted);">Desarrollo integral de niños en situación vulnerable</div>
               </div>
             </div>
           </div>
           <!-- Quote -->
           <div style="border-left:3px solid var(--p2);padding:1rem 1.25rem;background:rgba(61,189,173,0.05);border-radius:0 10px 10px 0;">
-            <p style="font-size:13px;color:var(--muted);line-height:1.7;font-style:italic;">"El problema no es el derecho — es que los servicios legales de calidad no deberían ser un privilegio."</p>
-            <p style="font-size:11px;color:var(--p2);font-weight:500;margin-top:.5rem;font-style:normal;">— Leslie Robles, Fundadora</p>
+            <p style="font-size:13px;color:var(--muted);line-height:1.7;font-style:italic;">"I may be only one person, but I can be one person who makes a difference."</p>
+            <p style="font-size:11px;color:var(--p2);font-weight:500;margin-top:.5rem;font-style:normal;">— Vadra Francene Groce, 10 años · Frase de Leslie</p>
           </div>
         </div>
       </div>
@@ -953,14 +975,49 @@
           <span style="color:var(--p2);">Para todos.</span>
         </h2>
         <p style="font-size:1.05rem;color:var(--muted);line-height:1.8;margin-bottom:1.25rem;">
-          Con más de 15 años asesorando grupos empresariales en la industria automotriz del norte de México, Leslie Robles conoce de primera mano la brecha entre lo que las empresas necesitan legalmente y lo que el mercado les ofrece.
+          Leslie Robles Terrazas está al frente del área jurídica de un grupo empresarial dedicado a la manufactura automotriz, fabricación de trailers y remolques, y al desarrollo de proyectos agrícolas a gran escala — entre ellos <strong style="color:var(--base);">Laguna de Encinillas</strong>, con aproximadamente 27,000 hectáreas para cultivo en Chihuahua.
         </p>
-        <p style="font-size:1.05rem;color:var(--muted);line-height:1.8;margin-bottom:2rem;">
-          Demasiadas veces vio a empresas y emprendedores recibir un <strong style="color:var(--base);">"machote" genérico, mal hecho pero bien cobrado</strong> — un documento que no protege a nadie, firmado por alguien que confió en el nombre de un despacho.
+        <p style="font-size:1.05rem;color:var(--muted);line-height:1.8;margin-bottom:1.25rem;">
+          Demasiadas veces vio a empresas y emprendedores recibir un <strong style="color:var(--base);">"machote" genérico, mal hecho pero bien cobrado</strong>. Agreed nace de esa frustración: democratizar el acceso a documentación jurídica de calidad real, sin barreras de costo ni de geografía.
         </p>
 
+        <!-- Filantropía -->
+        <div style="background:rgba(61,189,173,0.05);border:1px solid rgba(61,189,173,0.15);border-radius:14px;padding:1.25rem 1.5rem;margin-bottom:1.75rem;">
+          <div style="font-family:'Josefin Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--p1);font-weight:600;margin-bottom:1rem;">Filantropía</div>
+          <div style="display:flex;flex-direction:column;gap:.75rem;">
+            <div style="display:flex;align-items:flex-start;gap:10px;">
+              <span style="font-size:14px;flex-shrink:0;margin-top:1px;">🎵</span>
+              <div>
+                <div style="font-size:13px;font-weight:500;color:var(--base);">Mangos Music Foundation A.C.</div>
+                <div style="font-size:12px;color:var(--muted);line-height:1.5;">Cofundadora. Desarrollo integral de niños y adolescentes vulnerables a través de la música.</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px;">
+              <span style="font-size:14px;flex-shrink:0;margin-top:1px;">🏠</span>
+              <div>
+                <div style="font-size:13px;font-weight:500;color:var(--base);">Vida 180 A.C.</div>
+                <div style="font-size:12px;color:var(--muted);line-height:1.5;">Apoyo legal. Hogar para niños vulnerables en Chihuahua con enfoque en valores y desarrollo integral.</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px;">
+              <span style="font-size:14px;flex-shrink:0;margin-top:1px;">🐢</span>
+              <div>
+                <div style="font-size:13px;font-weight:500;color:var(--base);">La Tortuga Feliz S.C. de R.L.</div>
+                <div style="font-size:12px;color:var(--muted);line-height:1.5;">Apoyo legal. Protección de nidos de tortugas marinas en Juluchuca, Guerrero.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valores -->
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1.75rem;">
+          <span style="font-family:'Josefin Sans',sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--base);background:var(--light);border:1px solid rgba(9,70,77,0.12);padding:7px 18px;border-radius:100px;font-weight:600;">Determinación</span>
+          <span style="font-family:'Josefin Sans',sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--base);background:var(--light);border:1px solid rgba(9,70,77,0.12);padding:7px 18px;border-radius:100px;font-weight:600;">Objetividad</span>
+          <span style="font-family:'Josefin Sans',sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--base);background:var(--light);border:1px solid rgba(9,70,77,0.12);padding:7px 18px;border-radius:100px;font-weight:600;">Integridad</span>
+        </div>
+
         <!-- Servicios profesionales personales de Leslie -->
-        <div style="background:var(--white);border-radius:16px;border:1px solid rgba(9,70,77,0.1);padding:1.75rem;margin-bottom:1.5rem;">
+        <div style="background:var(--white);border-radius:16px;border:1px solid rgba(9,70,77,0.1);padding:1.75rem;">
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;">
             <div style="width:8px;height:8px;border-radius:50%;background:var(--p2);"></div>
             <span style="font-family:'Josefin Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--p1);font-weight:600;">Servicios profesionales · Leslie Robles</span>
@@ -999,22 +1056,6 @@
             Agenda una consulta con Leslie
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-        </div>
-
-        <!-- Stats -->
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
-          <div style="text-align:center;padding:1.25rem 1rem;background:var(--light);border-radius:14px;">
-            <div style="font-family:'Josefin Sans',sans-serif;font-size:2rem;font-weight:700;color:var(--base);line-height:1;">15+</div>
-            <div style="font-size:12px;color:var(--muted);margin-top:4px;">años de experiencia</div>
-          </div>
-          <div style="text-align:center;padding:1.25rem 1rem;background:linear-gradient(135deg,rgba(61,189,173,0.1),rgba(0,114,153,0.06));border-radius:14px;border:1px solid rgba(61,189,173,0.2);">
-            <div style="font-family:'Josefin Sans',sans-serif;font-size:1.1rem;font-weight:700;color:var(--p1);line-height:1.3;">MBA<br>Anáhuac</div>
-            <div style="font-size:12px;color:var(--muted);margin-top:6px;">Lic. Derecho ITESM</div>
-          </div>
-          <div style="text-align:center;padding:1.25rem 1rem;background:var(--light);border-radius:14px;">
-            <div style="font-family:'Josefin Sans',sans-serif;font-size:2rem;font-weight:700;color:var(--base);line-height:1;">Mex</div>
-            <div style="font-size:12px;color:var(--muted);margin-top:4px;">100% derecho mexicano</div>
-          </div>
         </div>
       </div>
     </div>
