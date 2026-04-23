@@ -4,3 +4,5 @@ gitignore/
 docs/
 CLAUDE_CODE_DEPLOY.md
 *.pdf
+.vercel
+node_modules/
