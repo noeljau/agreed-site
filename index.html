@@ -548,18 +548,71 @@
     border-top: 1px solid rgba(255,255,255,0.06);
   }
 
+  /* ── FOUNDER SECTION GRID ── */
+  .founder-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  /* ── PHOTO GALLERY GRID ── */
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 16px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--light);
+    height: 340px;
+  }
+
+  /* ── DOWNLOAD CV BUTTON ── */
+  .btn-dl-cv {
+    display: flex; align-items: center; justify-content: center; gap: 7px;
+    width: 100%; margin-bottom: 10px;
+    padding: 9px 18px;
+    background: var(--white);
+    border: 1px solid rgba(9,70,77,0.15);
+    border-radius: var(--radius);
+    color: var(--muted);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer;
+    transition: all .2s;
+  }
+  .btn-dl-cv:hover { background: var(--light); border-color: var(--base); color: var(--base); }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .hero-grid, .hiw-grid { grid-template-columns: 1fr; gap: 3rem; }
     .features-grid, .products-grid { grid-template-columns: 1fr 1fr; }
     .hero-bg { opacity: .04; width: 400px; height: 400px; }
     .nav-links { display: none; }
+    .founder-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .photo-gallery { height: 280px; }
+    .nav-cta { gap: .5rem; }
   }
   @media (max-width: 600px) {
     .features-grid, .products-grid { grid-template-columns: 1fr; }
     .cta-form { flex-direction: column; }
     .footer-inner { flex-direction: column; text-align: center; }
     .footer-links { flex-wrap: wrap; justify-content: center; }
+    .founder-grid { gap: 2rem; }
+    .photo-gallery { height: 230px; }
+    #cv-modal { padding: 0; align-items: flex-end; }
+    .papyrus-wrap { max-height: 92vh; border-radius: 16px 16px 0 0; }
+    .nav-cta .btn-primary { font-size: 12px; padding: 9px 14px; letter-spacing: 0.04em; }
+  }
+  @media (max-width: 400px) {
+    .photo-gallery { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; }
+    .photo-gallery > div { height: 180px; }
+    .photo-gallery > div:not(:first-child) { display: none; }
+    .nav-cta .btn-primary { display: none; }
+    .lang-switcher { margin-left: 0; }
   }
 
   /* ── LANG SWITCHER ── */
@@ -1043,7 +1096,7 @@
 <!-- ── FUNDADORA ── -->
 <section style="padding:7rem 0;background:linear-gradient(180deg,var(--light) 0%,rgba(244,248,249,0) 100%);" id="fundadora">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
+    <div class="founder-grid">
 
       <!-- Visual izquierda -->
       <div style="position:relative;">
@@ -1051,7 +1104,7 @@
         <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(61,189,173,0.08),rgba(0,114,153,0.05));border-radius:24px;transform:rotate(-2deg);"></div>
 
         <!-- Galería de fotos -->
-        <div style="display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:10px;margin-bottom:16px;border-radius:20px;overflow:hidden;background:var(--light);">
+        <div class="photo-gallery">
           <!-- Foto principal izquierda -->
           <div style="grid-row:1/3;position:relative;overflow:hidden;">
             <img src="media/leslie1.jpg" alt="Leslie Robles Terrazas" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
@@ -1065,6 +1118,12 @@
             <img src="media/leslie3.jpg" alt="Leslie Robles Terrazas" style="width:100%;height:100%;object-fit:cover;object-position:center top;transform:scale(1.25);transform-origin:center top;display:block;">
           </div>
         </div>
+
+        <!-- Descargar CV -->
+        <a id="cv-dl-btn" href="cv/leslie-cv-es.docx" download class="btn-dl-cv">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 7l3 3 3-3M2 10v1.5A1.5 1.5 0 003.5 13h7a1.5 1.5 0 001.5-1.5V10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-i18n="cv-dl">Descargar CV</span>
+        </a>
 
         <!-- Card credenciales -->
         <div style="position:relative;background:var(--white);border-radius:20px;border:1px solid rgba(9,70,77,0.08);padding:2rem;box-shadow:0 20px 60px rgba(9,70,77,0.08);">
@@ -1433,7 +1492,8 @@ var T = {
     'prod2-li3':'NDAs y acuerdos de confidencialidad','prod2-li4':'Contratos de arrendamiento y compraventa','prod2-li5':'Revisión de cláusulas con alertas legales',
     'prod3-li1':'Libro de actas digital centralizado','prod3-li2':'Seguimiento de acuerdos y cumplimiento',
     'prod3-li3':'Directorio de socios y apoderados','prod3-li4':'Avisos y recordatorios de obligaciones','prod3-li5':'Exportación a PDF/Word con membrete',
-    'cv-lang':'es'
+    'cv-lang':'es',
+    'cv-dl':'Descargar CV'
   },
   en: {
     title:'Agreed — Legal Intelligence for Mexico',
@@ -1511,7 +1571,8 @@ var T = {
     'prod2-li3':'NDAs and confidentiality agreements','prod2-li4':'Lease and sale agreements','prod2-li5':'Clause review with legal alerts',
     'prod3-li1':'Centralized digital minutes book','prod3-li2':'Agreement and compliance tracking',
     'prod3-li3':'Partner and attorney-in-fact directory','prod3-li4':'Obligation notices and reminders','prod3-li5':'PDF/Word export with letterhead',
-    'cv-lang':'en'
+    'cv-lang':'en',
+    'cv-dl':'Download CV'
   },
   pd: {
     title:'Agreed — Kluak Räajels fer Mexiko',
@@ -1589,7 +1650,8 @@ var T = {
     'prod2-li3':'NDAs en Jeheimhaultunks-Aumkome','prod2-li4':'Pacht- en Kaup-Ferträare','prod2-li5':'Klousele-Bekikjunk met räajelse Alerte',
     'prod3-li1':'Tsoamanjebrochtet digitaules Protokolbüak','prod3-li2':'Noholtunk von Aumkome en Erfelunk',
     'prod3-li3':'Teilhauwa- en Femedreetijer-Verzeichnis','prod3-li4':'Bekanntmoakunge en Erennerungs fer Pflichtte','prod3-li5':'Export no PDF/Word met Breefkopp',
-    'cv-lang':'es'
+    'cv-lang':'es',
+    'cv-dl':'CV Röwnlaode'
   }
 };
 
@@ -1613,6 +1675,8 @@ function setLanguage(lang) {
   document.querySelectorAll('.lang-btn').forEach(function(btn) {
     btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
   });
+  var dlBtn = document.getElementById('cv-dl-btn');
+  if (dlBtn) dlBtn.href = lang === 'en' ? 'cv/leslie-cv-en.docx' : 'cv/leslie-cv-es.docx';
 }
 
 function openCV() {
